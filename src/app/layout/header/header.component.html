@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <ul class="nav nav-pills nav-justified m-1">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active" href="#"><span
+                            class="far fa-eye"></span> View My Speeches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/add" routerLinkActive="active" href="#"><span
+                            class="fas fa-plus"></span> Submit New Speech</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group mt-1 ml-1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text fas fa-search"></span>
+                </div>
+                <input type="text" class="form-control" id="searchForm" placeholder="Seach all Speeches"
+                    (input)="onSearchChange($event.target.value)">
+            </div>
+        </div>
+    </div>
+</div>

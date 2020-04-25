@@ -24,9 +24,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/libs/bootstrap/css/bootstrap-theme-flatly.min.css",
+              "src/libs/fontawesome/css/all.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/libs/jquery/jquery-3.0.0.js",
+              "src/libs/bootstrap/js/bootstrap.bundle.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "speeches"
+    }
+  },
+  "defaultProject": "speeches",
+  "cli": {
+    "analytics": "38f891bb-f6f3-490f-8069-ad16a1562d5a"
+  }
 }

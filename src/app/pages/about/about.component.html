@@ -1,0 +1,30 @@
+<div class="container mt-1">
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote text-justify">
+                <p>I opted to not overdesign the solution since it is relatively simple. I structured the
+                    app by creating some components used as routing pages namely the "about", "add-speech", and
+                    "speeches" pages. The "speeches" component contain the majority of the app display logic. I did not
+                    worry too much about creating reusable components since it was mostly not needed, but I demonstrated
+                    how that is used using the "header" component found on src/app/layout/header. Communication between
+                    pages is handled by triggering events via a shared service called speech-service which also handles
+                    the faux data storage for the app. This interaction between components is demonstrated by the seach
+                    bar which is on the header, but fires events inside another component via the shared service.
+                </p>
+                <p>Other misc components are the model which is basically used as a data transfer object, and the error
+                    page which shows a bit about routing. I also added some icons using font awesome and a few
+                    transition animations on page routing.
+                </p>
+                <p>The pages were designed mobile first using bootstrap's responsive breakpoints to control the size and
+                    flow of the page components as the viewport resizes. I also used some media queries to collapse the
+                    listview when on small devices, and a button to expand it.
+                </p>
+                <p>All in all, what I did is very simple, and concise. And I feel that the problem warranted such. But I
+                    do think that I demonstrated my knowledge sufficiently, and hope that it is to you liking. Thank
+                    you.
+                </p>
+                <footer class="blockquote-footer">Michael Robin M. Dasmariñas</footer>
+            </blockquote>
+        </div>
+    </div>
+</div>

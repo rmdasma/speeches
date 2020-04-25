@@ -1,0 +1,47 @@
+<div class="container m-1">
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
+            <button class="speech-item btn btn-secondary btn-block d-md-none" type="button" data-toggle="collapse"
+                data-target="#speechList" aria-expanded="false" aria-controls="toggleSpeechLisst">
+                Show Speech List
+            </button>
+
+            <div class="collapse dont-collapse-sm" id="speechList">
+                <button *ngFor="let speech of speeches" (click)="selectSpeech(speech)"
+                    [class.d-hide]="speech.visible === false" [class.active]="speech === selectedSpeech" type="button"
+                    class="btn btn-dark btn-block speech-item">
+                    Speech {{speech.id}}
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12">
+            <form id="speechForm">
+                <div class="form-group">
+                    <textarea type="email" class="form-control" style="height: 250px;"
+                        placeholder="Speech content shown here" name="speechText"
+                        [(ngModel)]="selectedSpeech.text"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" placeholder="Author" name="speechAuthor"
+                            [(ngModel)]="selectedSpeech.author">
+                    </div>
+                    <div class="col-lg-4 mt-1">
+                        <input type="text" class="form-control" placeholder="Subject area keywords"
+                            name="speechKeywords" [(ngModel)]="selectedSpeech.keywords">
+                    </div>
+                    <div class="col-lg-4 mt-1">
+                        <input type="date" class="form-control" name="speechDate"
+                            [ngModel]="selectedSpeech.date | date :'yyyy-MM-dd'"
+                            (ngModelChange)="selectedSpeech.date = $event" type="date">
+                    </div>
+                </div>
+            </form>
+            <div class="text-right m-1">
+                <button type="button" class="btn btn-secondary" (click)="deleteSpeech(selectedSpeech)">Delete</button>
+                <button type="button" class="btn btn-secondary" (click)="editSpeech(selectedSpeech)">Save</button>
+                <button type="button" class="btn btn-secondary">Share</button>
+            </div>
+        </div>
+    </div>
+</div>

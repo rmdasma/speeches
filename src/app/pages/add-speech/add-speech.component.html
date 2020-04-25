@@ -1,0 +1,30 @@
+<div class="container m-1">
+    <div class="row">
+        <div class="col-12">
+            <form id="speechForm">
+                <div class="form-group">
+                    <textarea type="email" class="form-control" style="height: 250px;"
+                        placeholder="Speech content shown here" name="speechText" [(ngModel)]="speech.text"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" placeholder="Author" name="speechAuthor"
+                            [(ngModel)]="speech.author">
+                    </div>
+                    <div class="col-lg-4 mt-1">
+                        <input type="text" class="form-control" placeholder="Subject area keywords"
+                            name="speechKeywords" [(ngModel)]="speech.keywords">
+                    </div>
+                    <div class="col-lg-4 mt-1">
+                        <input type="date" class="form-control" name="speechDate"
+                            [ngModel]="speech.date | date :'yyyy-MM-dd'" (ngModelChange)="speech.date = $event"
+                            type="date">
+                    </div>
+                </div>
+            </form>
+            <div class="text-right m-1">
+                <button type="button" class="btn btn-secondary" (click)="saveSpeech(speech)">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

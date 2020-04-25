@@ -1,0 +1,23 @@
+@media screen and (max-width: 767px) {
+    #speechForm {
+        margin-top: 3px;
+    }
+}
+
+@media (min-width: 768px) {
+    .collapse.dont-collapse-sm {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
+}
+
+.speech-item {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.d-hide {
+    display: none;
+}
